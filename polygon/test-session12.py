@@ -16,6 +16,8 @@ README_CONTENT_CHECK_FOR = [
     'gt',
     'len',
     'getitem',
+    'iter',
+    'next',
     'maximum_efficient_polygon'
 ]
 
