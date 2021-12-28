@@ -61,6 +61,8 @@ class PolygonSequence:
 
 
     def __iter__(self):
+        '''The dunder method of iteration returns the iterator class, which will make the iteration \
+        run till the length of the dataset.'''
         return self.PolygonSequenceIterator(self._maxn, self._r)
 
 
@@ -86,17 +88,27 @@ class PolygonSequence:
 
 
     class PolygonSequenceIterator:
+        '''An iterator is a class which contains both the 'iter' and the 'next', which makes a collection \
+        or an iterable indexable. This class has been written as an iterator for the data generated in \
+        class PolygonSequence.'''
+
         def __init__(self, maxvertices, circumradius):
+            '''The class is initialized in a way that it can accept the arguments of maximum vertices and \
+            circumradius. In addition, in order to maintain the state of iteration within the collection a \
+            variable ‘index’ has been employed, which has been initiated with 0.'''
             self.maxvertices = maxvertices
             self.circumradius = circumradius
             self.index = 0
 
 
         def __iter__(self):
+            '''This dunder method of iteration returns the instance of this class (self).'''
             return self
 
 
         def __next__(self):
+            '''This dunder method of next keeps score of the number of times the iteration has been done, \
+            and stops the process once of the dataset has been exhausted.'''
             if self.index >= self.maxvertices:
                 raise StopIteration
             elif (self.index >= 0 and self.index<3):
