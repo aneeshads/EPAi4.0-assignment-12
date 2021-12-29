@@ -88,7 +88,7 @@ class PolygonSequence:
 
 
     class PolygonSequenceIterator:
-        '''An iterator is a class which contains both the 'iter' and the 'next', which makes a collection \
+        '''An iterator is a class which contains both the 'iter' and the 'next' functions, which makes a collection \
         or an iterable indexable. This class has been written as an iterator for the data generated in \
         class PolygonSequence.'''
 
